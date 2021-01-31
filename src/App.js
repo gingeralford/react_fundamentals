@@ -1,23 +1,28 @@
-
+import React from 'react';
+import 'bootstrap/dist/css/bootstrap.css'
 import './App.css';
-import Header from './components/Header'
-import Myself from './components/challenges/day01/Myself'
-import Home from './components/Home'
-import Footer from './components/Footer'
+import Header from './components/site/Header';
+import Footer from './components/site/Footer';
+import Sidebar from './components/site/Sidebar';
+import {
+  BrowserRouter as Router,
+} from 'react-router-dom';
 
-function App() {
+
+
+
+const App = () => {
  //JS above return statement injected into JSX using curly brackets
 
   return (
-    <div className="App">
-    
-    <Header /> {/* this is how you mount a component */}
-    <Myself />
-    <Home />
-    <Footer />
+    <div>
+      <Header />
+      <Router>
+        <Sidebar />
+      </Router>
+      <Footer />
     </div>
-    
   );
-}
+};
 
 export default App;
