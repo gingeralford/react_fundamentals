@@ -22,9 +22,27 @@ export default Effects;
 
 const SampleEffect = () => {
     const [timerRunning, setTimerRunning] = useState(false);
+
     useEffect(() => {
-        console.log('we initiated a state change')
-    })
+        let timer;
+        if (timerRunning){
+            timer = window.setTimeout(() => {
+                console.log('the timer expired', Date.now()/1000);
+                setTimerRunning(false);
+            }, 2000) //2000 miliseconds = 2 seconds
+            //Date.now() returns the number of miliseconds since the "Unix Epoch" 1/1/1970!
+        }
+
+        return () => {window.clearTimeout(timer); console.log('the timer was cleaned up', Date.now()/1000)}
+        //clean up function will run the first time, and every time there is a state change, no matter what
+    });
+
+    useEffect(() => {
+        if (timerRunning){
+            console.log("Howdy!");
+        } 
+    }, [])
+    //not sure why we need the bracket set, it works without it.
 
     let buttonHandler = () => {
         if (!timerRunning){
