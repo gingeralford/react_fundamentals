@@ -28,7 +28,7 @@ const NormalComponent = () => {
         <div style={{ border: '2px solid black' }}>
         <h1>Normal Functional Component</h1>
         <p>This was constructed with JSX in the return.</p>
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSTLsZtEs4N7hlthpkaRUBwqcToenaNK7tpEg&usqp=CAU" />
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSTLsZtEs4N7hlthpkaRUBwqcToenaNK7tpEg&usqp=CAU" alt="computer screen with coding language"/>
         </div>
     );
 };

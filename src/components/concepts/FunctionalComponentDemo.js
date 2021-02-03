@@ -1,8 +1,8 @@
 import React from 'react';
-import Resources from '../site/Resources';
+
 import HelloWorld from './HelloWorld';
 import HelloWorldFatArrow from './HelloWorldFatArrow';
-import { Card, CardImg, CardBody, CardTitle, CardSubtitle, CardText, Button, Container, Row, Col } from 'reactstrap';
+import { Container, Row, Col } from 'reactstrap';
 
 const FunctionalComponentDemo =  () => {
     return (
